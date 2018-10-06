@@ -1,0 +1,20 @@
+mqtt:
+  client:
+    protocol: 4      # MQTTv311
+  connection:
+    host: localhost
+    port: 1883
+    keepalive: 60
+  private_path: device/001
+serializer: msgpack:dumps
+deserializer: msgpack:loads
+bridge:
+  # ping pong
+  - factory: mqtt_bridge.bridge:RosToMqttBridge
+    msg_type: std_msgs.msg:Float32
+    topic_from: /motor/pos
+    topic_to: motor/pos
+#  - factory: mqtt_bridge.bridge:MqttToRosBridge
+#    msg_type: std_msgs.msg:Int32
+#    topic_from: motor/pos
+#    topic_to: /motor/pos

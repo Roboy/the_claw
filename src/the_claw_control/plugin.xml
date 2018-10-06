@@ -1,0 +1,14 @@
+<library path="lib/libthe_claw_control">
+  <class name="TheClawControl" type="TheClawControl" base_class_type="rqt_gui_cpp::Plugin">
+    <description>
+      the claw control
+    </description>
+    <qtgui>
+      <group>
+        <label>Roboy</label>
+      </group>
+      <label>the claw control</label>
+      <statustip>Great user interface to provide real value.</statustip>
+    </qtgui>
+  </class>
+</library>

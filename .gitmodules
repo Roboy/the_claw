@@ -1,0 +1,3 @@
+[submodule "src/mqtt_bridge"]
+	path = src/mqtt_bridge
+	url = https://github.com/groove-x/mqtt_bridge
